@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Douaa Dabouih · Backend & Security Engineer</title>
+<meta name="description" content="Backend and security engineer. I build secure multi-tenant systems and I know how to attack them. Next.js, NestJS, PostgreSQL, DevSecOps.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EEF1F5;--panel:#fff;--ink:#1B2433;--mute:#5B6475;--line:#D5DBE5;--teal:#0E9BA3;--teal-soft:#D9F2F3;--red:#C93A3A;--red-soft:#FADDDD;--green:#1E8A5B;
+--display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;--body:"Hanken Grotesk","Segoe UI",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--body)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+header.top b{font:700 18px var(--display)}
+nav a{margin-left:22px;text-decoration:none;color:var(--mute);font-weight:500}
+nav a:hover{color:var(--ink)}
+.hero{padding:48px 0 56px}
+h1{font:700 clamp(40px,7vw,76px)/1.02 var(--display);letter-spacing:-.02em;max-width:14ch}
+.lead{max-width:56ch;margin-top:22px;font-size:19px;color:var(--mute)}
+.lead b{color:var(--ink);font-weight:600}
+.sim{margin-top:44px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px}
+.sim h2{font:700 22px var(--display)}
+.sim p.sub{color:var(--mute);font-size:15px;margin:4px 0 18px}
+.scen{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
+.scen button{font:500 15px var(--body);padding:10px 16px;border-radius:999px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer}
+.scen button:hover{border-color:var(--teal)}
+.scen button[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.pipe{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.st{border:2px solid var(--line);border-radius:10px;padding:14px 12px;min-height:96px;background:var(--panel);transition:background .25s,border-color .25s}
+.st b{display:block;font:700 15px var(--display)}
+.st span{display:block;font-size:13px;color:var(--mute);margin-top:4px;line-height:1.35}
+.st.pass{border-color:var(--green);background:#E6F5EE}
+.st.block{border-color:var(--red);background:var(--red-soft)}
+.st.skip{opacity:.4}
+.st.on{border-color:var(--teal);background:var(--teal-soft)}
+.out{margin-top:18px;padding:14px 16px;border-radius:10px;background:var(--bg);font-size:15px;min-height:56px}
+.out strong{font-weight:600}
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2.s{font:700 clamp(28px,4vw,38px)/1.1 var(--display);letter-spacing:-.01em;margin-bottom:24px}
+.case{display:grid;grid-template-columns:1.1fr .9fr;gap:40px}
+.case p{margin-bottom:14px;max-width:62ch}
+.case ul{list-style:none;padding:0}
+.case li{padding:10px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+.case li b{font-weight:600}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.tags span{font-size:14px;padding:4px 12px;border-radius:999px;background:var(--panel);border:1px solid var(--line)}
+.job{display:grid;grid-template-columns:200px 1fr;gap:12px 32px;padding:22px 0;border-bottom:1px solid var(--line)}
+.job:first-of-type{padding-top:0}
+.job h3{font:700 19px var(--display)}
+.job .when{color:var(--mute);font-size:15px}
+.job p{max-width:64ch}
+.proj{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 40px}
+.proj h3{font:700 18px var(--display);margin-bottom:4px}
+.proj p{font-size:15.5px;color:var(--mute)}
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:24px 40px}
+.skills h3{font:700 16px var(--display);margin-bottom:6px}
+.skills p{font-size:15.5px;color:var(--mute)}
+.contact p{max-width:52ch;margin-bottom:18px;color:var(--mute)}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;background:var(--ink);color:#fff;text-decoration:none;font-weight:600;margin-right:10px}
+.btn.alt{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+footer{padding:28px 0 48px;color:var(--mute);font-size:14px}
+@media(max-width:820px){.pipe{grid-template-columns:1fr}.st{min-height:0}.case,.proj,.skills{grid-template-columns:1fr}.job{grid-template-columns:1fr;gap:4px}nav a{margin-left:14px}}
+@media(prefers-reduced-motion:reduce){.st{transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><b>Douaa Dabouih</b>
+<nav aria-label="Main"><a href="#work">Nova PMS</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav></header>
+
+<main>
+<div class="hero">
+<h1>I build backends the way I used to attack them.</h1>
+<p class="lead"><b>Backend & security engineer</b> in Agadir. I design and build secure multi-tenant software, assuming someone is already probing every route. Next.js, NestJS, PostgreSQL, and a WAF in front of all of it.</p>
+
+<div class="sim" id="sim">
+<h2>Send a request through the system I built</h2>
+<p class="sub">This is how requests travel through Nova PMS, my hotel management platform. Pick one and watch where it stops.</p>
+<div class="scen" role="group" aria-label="Choose a request"></div>
+<div class="pipe" aria-live="polite"></div>
+<div class="out" id="out">Choose a request above.</div>
+</div>
+</div>
+
+<section id="work">
+<h2 class="s">Nova PMS, my final-year project</h2>
+<div class="case">
+<div>
+<p>A multi-tenant SaaS platform for hotels: reservations, front office, cash shifts, pricing, Stripe payments, OTA calendar sync, and AI executive reports. I was the only engineer, so I handled the architecture, the design and the development.</p>
+<p>Defended on 24 October 2026 at Universiapolis, built with Ultimate Solutions Morocco: <em>a DevSecOps architecture for a multi-tenant hotel PMS</em>.</p>
+<div class="tags"><span>Next.js 16</span><span>NestJS 11</span><span>PostgreSQL 16</span><span>TypeORM migrations</span><span>DBeaver</span><span>Redis</span><span>Docker Compose</span><span>Stripe</span><span>Nginx WAF</span><span>GitHub Actions</span><span>SonarQube</span></div>
+</div>
+<ul>
+<li><b>Tenant isolation.</b> A global guard and a tenant ID on every record, so one hotel never sees another.</li>
+<li><b>Two-level access control.</b> 4 roles and 13 permissions, set by the hotel owner.</li>
+<li><b>Authentication.</b> Argon2id password hashing, and JWT with refresh-token rotation.</li>
+<li><b>Edge defence.</b> Rate limiting, SQL injection and XSS filtering, scanner blocking.</li>
+<li><b>Payments.</b> Stripe with Redis locks so a room is never booked twice.</li>
+<li><b>Traceability.</b> Every sensitive action logged with who, when and from where.</li>
+</ul>
+</div>
+</section>
+
+<section id="experience">
+<h2 class="s">Experience</h2>
+<div class="job"><div><h3>Security & Backend Engineer</h3><div class="when">Ultimate Solutions Morocco<br>Final-year project, 2026</div></div><p>Architecture, design and full-stack development of Nova PMS, from the Next.js frontend to the PostgreSQL schema and its migrations, with security built in from the first commit.</p></div>
+<div class="job"><div><h3>Security Lead</h3><div class="when">Berkeby<br>Feb – Mar 2026</div></div><p>Designed the security architecture of a SaaS EdTech platform. Deployed CrowdSec and a hardened WAF on Docker Swarm, automated dependency checks with Dependabot, and ran STRIDE threat modeling, API penetration testing and JWT reviews.</p></div>
+<div class="job"><div><h3>Chief RedOps</h3><div class="when">HexDefender Infosec<br>Jul – Oct 2025</div></div><p>Built reproducible attack environments with Terraform and Ansible, and automated reconnaissance and exploitation workflows with SpiderFoot, Bash and Python.</p></div>
+<div class="job"><div><h3>Web Pentester</h3><div class="when">Hacktify Security Labs<br>Apr 2025</div></div><p>Wrote custom Nuclei templates that continuously detect XSS, SQL injection and IDOR, and worked with developers on fixes.</p></div>
+<div class="job"><div><h3>Security Administrator</h3><div class="when">Raznet Maroc, Casablanca<br>Mar – Jul 2023</div></div><p>Automated secure file transfers over SFTP and SCP, hardened Linux systems, and managed remote access.</p></div>
+</section>
+
+<section id="projects">
+<h2 class="s">Other projects</h2>
+<div class="proj">
+<div><h3>RedOps Automation</h3><p>Terraform and Ansible setup that deploys offensive security environments in one run.</p></div>
+<div><h3>SynLock</h3><p>A test tool for checking that endpoint detection, SIEM logging and EDR catch complex encryption behavior.</p></div>
+<div><h3>InTrack</h3><p>An automated OSINT crawler for technical reconnaissance.</p></div>
+<div><h3>GNS3 Cyber Range</h3><p>A virtual lab for Active Directory attacks and network pivoting, used to map attacks to MITRE ATT&amp;CK and write detection rules.</p></div>
+</div>
+</section>
+
+<section id="skills">
+<h2 class="s">Skills</h2>
+<div class="skills">
+<div><h3>Build</h3><p>NestJS, Next.js, React, TypeScript, PostgreSQL, Redis, Stripe, Docker Compose</p></div>
+<div><h3>Secure</h3><p>STRIDE threat modeling, Nginx and BunkerWeb WAF, CrowdSec, JWT security, multi-tenant isolation, RBAC, Argon2id, SonarQube, Dependabot</p></div>
+<div><h3>Automate</h3><p>Terraform, Ansible, Python, Bash, GitHub Actions, Linux hardening</p></div>
+<div><h3>Attack</h3><p>Web and API penetration testing, red teaming, Burp Suite, Nuclei, Metasploit, OSINT</p></div>
+</div>
+</section>
+
+<section id="contact" class="contact">
+<h2 class="s">Let's talk</h2>
+<p>I'm looking for backend, security engineering and DevSecOps roles. I speak Arabic, French, English and some German.</p>
+<a class="btn" href="mailto:douaa.dabouih@e-polytechnique.ma">Send an email</a>
+<a class="btn alt" href="https://www.linkedin.com/in/douae-dabouih-445601238/" rel="noopener">Open LinkedIn</a>
+</section>
+</main>
+<footer>© 2026 Douaa Dabouih · Agadir, Morocco</footer>
+</div>
+
+<script>
+const stages=[
+{id:"waf",n:"Firewall",d:"Nginx WAF, rate limits"},
+{id:"jwt",n:"Authentication",d:"Valid JWT required"},
+{id:"ten",n:"Tenant check",d:"Right hotel only"},
+{id:"rbac",n:"Permissions",d:"Role and permission"},
+{id:"db",n:"Database",d:"PostgreSQL"}];
+const scen=[
+{t:"Receptionist views a booking",stop:null,msg:"<strong>200 OK.</strong> The request passed every check and returned the booking for this hotel only."},
+{t:"SQL injection in the URL",stop:"waf",msg:"<strong>403 at the firewall.</strong> The WAF spotted the injection pattern in the query string, so the request never reached the application."},
+{t:"No login token",stop:"jwt",msg:"<strong>401 at authentication.</strong> The route needs a valid access token, so an anonymous request is rejected."},
+{t:"Token from another hotel",stop:"ten",msg:"<strong>Blocked by the tenant check.</strong> The hotel ID in the token does not match the data requested, so nothing from another hotel is ever read."},
+{t:"Receptionist cancels a payment",stop:"rbac",msg:"<strong>403 at permissions.</strong> This employee lacks the permission to cancel a payment without approval. Only the owner can grant it."}];
+const sc=document.querySelector(".scen"),pipe=document.querySelector(".pipe"),out=document.getElementById("out");
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+pipe.innerHTML=stages.map(s=>`<div class="st" id="st-${s.id}"><b>${s.n}</b><span>${s.d}</span></div>`).join("");
+let timer=[];
+function run(i,btn){
+  timer.forEach(clearTimeout);timer=[];
+  sc.querySelectorAll("button").forEach(b=>b.setAttribute("aria-pressed",b===btn));
+  stages.forEach(s=>document.getElementById("st-"+s.id).className="st");
+  out.innerHTML="Checking…";
+  const sn=scen[i];let blocked=false;
+  stages.forEach((s,k)=>{
+    const el=document.getElementById("st-"+s.id);
+    timer.push(setTimeout(()=>{
+      if(blocked){el.className="st skip";return}
+      if(sn.stop===s.id){el.className="st block";blocked=true}
+      else el.className="st pass";
+      if(k===stages.length-1||blocked&&k===stages.findIndex(x=>x.id===sn.stop))out.innerHTML=sn.msg;
+    },reduce?0:k*420));
+  });
+}
+scen.forEach((s,i)=>{const b=document.createElement("button");b.textContent=s.t;b.setAttribute("aria-pressed","false");b.onclick=()=>run(i,b);sc.appendChild(b)});
+</script>
+</body>
+</html>
